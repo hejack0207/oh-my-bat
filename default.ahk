@@ -37,7 +37,7 @@ StartProgram("firefox.exe","C:\Program Files\Mozilla Firefox\firefox.exe",false)
 return
 
 !^c::
-StartProgram("chrome.exe","C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",false)
+StartProgram("chrome.exe","C:\Program Files\Google\Chrome\Application\chrome.exe",false)
 return
 
 !^b::
@@ -94,7 +94,7 @@ StartProgram("bash.exe","""C:\Program Files\Git\bin\bash.exe"" --login -i ""C:\P
 return
 
 !^,::
-StartProgram("mintty.exe","D:\Users\blueo\scoop\apps\msys2\current\mingw64.exe zsh",false)
+StartProgram("mintty.exe","D:\Program Files\msys64\mingw64.exe zsh",false)
 return
 
 ; explorer
@@ -130,7 +130,7 @@ StartProgram("PDFXCview.exe","C:\Program Files\Tracker Software\PDF Viewer\PDFXC
 return
 
 !^n::
-StartProgram("VNote.exe","C:\Program Files\VNote\VNote.exe",false)
+StartProgram("VNote.exe","D:\Program Files\VNote_win_X64_portable_2.7.2\VNote\VNote.exe",false)
 return
 
 !^y::
