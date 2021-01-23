@@ -94,7 +94,7 @@ StartProgram("bash.exe","""C:\Program Files\Git\bin\bash.exe"" --login -i ""C:\P
 return
 
 !^,::
-StartProgram("mingw64.exe","D:\Program Files\msys64\mingw64.exe tmux",false)
+StartProgram("mintty.exe","D:\Program Files\msys64\mingw64.exe tmux",false)
 return
 
 ; explorer
