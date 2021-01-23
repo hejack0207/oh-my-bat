@@ -90,10 +90,12 @@ StartProgram("ConEmu64.exe","C:\Program Files (x86)\cmder_mini\vendor\conemu-max
 return
 
 !^,::
+EnvSet, MSYSTEM, MSYS2
 StartProgram("mintty.exe","D:\Program Files\msys64\usr\bin\mintty.exe -i ""D:\Program Files\msys64\msys2.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\msys2.exe"" -o AppID=MSYS2.Shell.MSYS.9 -o AppName=""MSYS2 MSYS Shell"" -T MSYS2 --store-taskbar-properties -- /usr/bin/zsh -l",false)
 return
 
 !^.::
+EnvSet, MSYSTEM, MINGW64
 StartProgram("mintty.exe","D:\Program Files\msys64\usr\bin\mintty.exe -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/zsh -l",false)
 return
 
