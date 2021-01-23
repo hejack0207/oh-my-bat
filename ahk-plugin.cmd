@@ -20,10 +20,18 @@ if "x%~1" == "x/?" (
   exit /b %ERRORLEVEL%
 )
 
-if "x%~1" == "xinstall" shift& goto :install
+if "x%~1" == "xinstall" shift & goto :install
+
+if "x%~1" == "xview" shift & goto :view
+
+exit /b 0
 
 :install
 copy default.ahk "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\default.ahk"
+exit /b 0
+
+:view
+view "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\default.ahk"
 exit /b 0
 
 :printhelp
