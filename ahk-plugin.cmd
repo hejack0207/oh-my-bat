@@ -40,7 +40,7 @@ echo     %~1 [options]
 echo.
 echo Options:
 echo     install			  install default ahk script
-echo     uninstall			  uninstall ahk script
+echo     view				  view installed ahk script
 echo     -help ^| --help ^| -? ^| /?         Display this help and exit
 echo.
 exit /b 0
