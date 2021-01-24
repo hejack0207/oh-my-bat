@@ -112,7 +112,7 @@ return
 StartProgram("Everything.exe","C:\Program Files\Everything\Everything.exe",false)
 return
 
-!^r::
+!^x::
 StartProgram("Explorer.exe","C:\Windows\explorer.exe",false)
 return
 
