@@ -83,7 +83,7 @@ return
 
 !^;::
 EnvSet, MSYSTEM, MINGW64
-StartWindow("mingw64-tmux","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64-tmux -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/bash -lc ""tmux""",false)
+StartWindow("mingw64-tmux","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64-tmux -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/tmux",false)
 return
 
 !^/::
@@ -111,6 +111,10 @@ return
 
 !^r::
 StartProgram("Explorer.exe","C:\Windows\explorer.exe",false)
+return
+
+!^s::
+StartProgram("eCloud.exe","C:\Program Files (x86)\ecloud\eCloud.exe",false)
 return
 
 ;remote
