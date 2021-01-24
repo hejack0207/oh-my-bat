@@ -1,16 +1,5 @@
 #SingleInstance force
 
-/*
-!^w::
-if WinExist("ahk_exe WeChat.exe"){
-    WinActivate, ahk_class WeChatMainWndForPC
-	SetControlDelay -1
-	ControlClick , EditWnd1, ahk_class WeChatMainWndForPC
-	;ControlFocus , EditWnd1, ahk_class WeChatMainWndForPC
-	ControlSend, EditWnd1, xr, ahk_class WeChatMainWndForPC
-}
-*/
-
 RunAsAdmin(Fullpath){
     ;~ RunAs, Administrator, 123qwe!@#
     ;~ Run, %Fullpath%
@@ -31,6 +20,19 @@ StartProgram(ProgramName,ProgramFullPath, AsAdmin){
     return
 }
 
+StartWindow(WinClass, ProgramFullPath, AsAdmin){
+    if WinExist("ahk_class " . WinClass){
+        WinActivate, ahk_class %WinClass%
+    }else{
+        if (AsAdmin) {
+            RunAsAdmin(ProgramFullPath)
+        } else {
+            Run, %ProgramFullPath%
+        }
+    }
+    return
+}
+
 ; browsers
 !^f::
 StartProgram("firefox.exe","C:\Program Files\Mozilla Firefox\firefox.exe",false)
@@ -40,13 +42,18 @@ return
 StartProgram("chrome.exe","C:\Program Files\Google\Chrome\Application\chrome.exe",false)
 return
 
+/*
 !^b::
 StartProgram("ApplicationFrameHost.exe","C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps\MicrosoftEdge.exe",false)
 return
+*/
 
-; ide 
-!^i::
-StartProgram("idea64.exe","C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.1\bin\idea64.exe",false)
+; editor
+!^g::
+if FileExist("C:\Windows\gvim.bat")
+    Fullpath_Gvim := "C:\Windows\gvim.bat"
+
+StartProgram("gvim.exe",Fullpath_Gvim,false)
 return
 
 !^v::
@@ -59,49 +66,43 @@ if FileExist("d:\Users\blueo\scoop\apps\vscode\1.38.1\Code.exe")
 StartProgram("Code.exe",Fullpath_Code,true)
 return
 
-/*
-*/
-!^g::
-if FileExist("C:\Windows\gvim.bat")
-    Fullpath_Gvim := "C:\Windows\gvim.bat"
-
-StartProgram("gvim.exe",Fullpath_Gvim,false)
+!^i::
+StartProgram("idea64.exe","C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.1\bin\idea64.exe",false)
 return
-
 
 ; shell
-!^p::
-;~ StartProgram("pwsh.exe","C:\Windows\System32\runas.exe /profile /env /user:he-win10\Administrator /savecred pwsh",false)
-StartProgram("pwsh.exe","pwsh",true)
-return
-
-!^u::
-StartProgram("wsl.exe","C:\Windows\System32\wsl.exe -d ubuntu1804",false)
-/* if WinExist("ahk_exe " . "wsl.exe"){
- *     WinActivate, ahk_exe wsl.exe
- * }else{
- *     Run, C:\Windows\System32\wsl.exe -d ubuntu1804,c:\
- * }
- */
-return
-
-!^k::
-StartProgram("ConEmu64.exe","C:\Program Files (x86)\cmder_mini\vendor\conemu-maximus5\ConEmu64.exe",true)
-return
-
 !^,::
 EnvSet, MSYSTEM, MSYS2
-StartProgram("mintty.exe","D:\Program Files\msys64\usr\bin\mintty.exe -i ""D:\Program Files\msys64\msys2.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\msys2.exe"" -o AppID=MSYS2.Shell.MSYS.9 -o AppName=""MSYS2 MSYS Shell"" -T MSYS2 --store-taskbar-properties -- /usr/bin/zsh -l",false)
+StartWindow("msys2","D:\Program Files\msys64\usr\bin\mintty.exe --class msys2 -i ""D:\Program Files\msys64\msys2.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\msys2.exe"" -o AppID=MSYS2.Shell.MSYS.9 -o AppName=""MSYS2 MSYS Shell"" -T MSYS2 --store-taskbar-properties -- /usr/bin/zsh -l",false)
 return
 
 !^.::
 EnvSet, MSYSTEM, MINGW64
-StartProgram("mintty.exe","D:\Program Files\msys64\usr\bin\mintty.exe -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/zsh -l",false)
+StartWindow("mingw64","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64 -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/zsh -l",false)
+return
+
+!^'::
+EnvSet, MSYSTEM, MINGW64
+StartWindow("mingw64","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64 -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/zsh -lc tmux",false)
 return
 
 !^/::
 StartProgram("bash.exe","""C:\Program Files\Git\bin\bash.exe"" --login -i ""C:\Program Files\Docker Toolbox\start.sh""",false)
 return
+
+/*
+!^p::
+StartProgram("pwsh.exe","pwsh",true)
+return
+
+!^u::
+StartProgram("wsl.exe","C:\Windows\System32\wsl.exe -d ubuntu1804",false)
+return
+
+!^k::
+StartProgram("ConEmu64.exe","C:\Program Files (x86)\cmder_mini\vendor\conemu-maximus5\ConEmu64.exe",true)
+return
+*/
 
 ; explorer
 !^e::
@@ -113,13 +114,15 @@ StartProgram("Explorer.exe","C:\Windows\explorer.exe",false)
 return
 
 ;remote
-!^m::
-StartProgram("MobaXterm.EXE","C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe",false)
-return
-
 !^t::
 StartProgram("WinSCP.exe","C:\Program Files (x86)\WinSCP\WinSCP.exe",false)
 return
+
+/*
+!^m::
+StartProgram("MobaXterm.EXE","C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe",false)
+return
+*/
 
 ;database
 !^h::
@@ -127,10 +130,6 @@ StartProgram("heidisql.exe","C:\Program Files\HeidiSQL\heidisql.exe",false)
 return
 
 ; documents
-!^s::
-StartProgram("soffice.exe","C:\Program Files\LibreOffice\program\soffice.exe",false)
-return
-
 !^d::
 StartProgram("PDFXCview.exe","C:\Program Files\Tracker Software\PDF Viewer\PDFXCview.exe",false)
 return
@@ -139,6 +138,21 @@ return
 StartProgram("VNote.exe","D:\Program Files\VNote_win_X64_portable_2.7.2\VNote\VNote.exe",false)
 return
 
+; communication
+!^w::
+StartProgram("WXWork.exe","C:\Program Files (x86)\WXWork\WXWork.exe",false)
+return
+
+!^q::
+StartProgram("Qidian.exe","C:\Program Files (x86)\Tencent\QiDian\Bin\QiDian.exe",false)
+return
+
+/*
+!^s::
+StartProgram("soffice.exe","C:\Program Files\LibreOffice\program\soffice.exe",false)
+return
+
 !^y::
 StartProgram("Evernote.exe","C:\Program Files (x86)\Yinxiang Biji\Ó¡Ïó±Ê¼Ç\Evernote.exe",false)
 return
+*/
