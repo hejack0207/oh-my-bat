@@ -33,6 +33,9 @@ StartWindow(WinClass, ProgramFullPath, AsAdmin){
     return
 }
 
+; autohotkey
+!^r::Reload ; Assign Ctrl-Alt-R as a hotkey to restart the script.
+
 ; browsers
 !^f::
 StartProgram("firefox.exe","C:\Program Files\Mozilla Firefox\firefox.exe",false)
