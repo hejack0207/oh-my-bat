@@ -73,9 +73,11 @@ if FileExist("d:\Users\blueo\scoop\apps\vscode\1.38.1\Code.exe")
 StartProgram("Code.exe",Fullpath_Code,true)
 return
 
+/*
 !^i::
 StartProgram("idea64.exe","C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.1\bin\idea64.exe",false)
 return
+*/
 
 ; shell
 !^,::
@@ -159,6 +161,11 @@ return
 
 !^q::
 StartProgram("QiDian.exe","C:\Program Files (x86)\Tencent\QiDian\Bin\QiDian.exe",false)
+return
+
+; vpn
+!^i::
+StartProgram("iOA.exe","""C:\Program Files (x86)\iOA\iOA.exe"" -userstart",false)
 return
 
 /*
