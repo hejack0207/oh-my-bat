@@ -50,8 +50,8 @@ return
 
 ; editor
 !^g::
-if FileExist("C:\Windows\gvim.bat")
-    Fullpath_Gvim := "C:\Windows\gvim.bat"
+if FileExist("C:\Program Files (x86)\Vim\vim82\gvim.exe")
+    Fullpath_Gvim := "C:\Program Files (x86)\Vim\vim82\gvim.exe"
 
 StartProgram("gvim.exe",Fullpath_Gvim,false)
 return
@@ -81,9 +81,9 @@ EnvSet, MSYSTEM, MINGW64
 StartWindow("mingw64","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64 -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/zsh -l",false)
 return
 
-!^'::
+!^;::
 EnvSet, MSYSTEM, MINGW64
-StartWindow("mingw64-tmux","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64-tmux -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/zsh -lc tmux",false)
+StartWindow("mingw64-tmux","D:\Program Files\msys64\usr\bin\mintty.exe --class mingw64-tmux -i ""D:\Program Files\msys64\mingw64.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\mingw64.exe"" -o AppID=MSYS2.Shell.MINGW64.9 -o AppName=""MSYS2 MINGW64 Shell"" -T MINGW64 --store-taskbar-properties -- /usr/bin/bash -lc ""tmux""",false)
 return
 
 !^/::
