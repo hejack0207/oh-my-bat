@@ -144,7 +144,7 @@ StartProgram("WXWork.exe","C:\Program Files (x86)\WXWork\WXWork.exe",false)
 return
 
 !^q::
-StartProgram("Qidian.exe","C:\Program Files (x86)\Tencent\QiDian\Bin\QiDian.exe",false)
+StartProgram("QiDian.exe","C:\Program Files (x86)\Tencent\QiDian\Bin\QiDian.exe",false)
 return
 
 /*

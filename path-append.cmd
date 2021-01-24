@@ -19,8 +19,11 @@ if "x%~1" == "x/?" (
   call :printhelp "%~nx0"
   exit /b %ERRORLEVEL%
 )
+exit /b 0
 
-call :appendpath %2
+call :checkparams
+@echo "%1"
+call :appendpath "%1"
 goto :EOF
 
 :appendpath
@@ -30,7 +33,7 @@ exit /b 0
 
 :printhelp
 echo Usage:
-echo     %~1 [options] <path>
+echo     %~1 [options] path...
 echo.
 echo Options:
 echo     -help ^| --help ^| -? ^| /?         Display this help and exit
