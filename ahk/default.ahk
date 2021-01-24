@@ -96,6 +96,7 @@ StartWindow("mingw64-tmux","D:\Program Files\msys64\usr\bin\mintty.exe --class m
 return
 
 !^/::
+; StartProgram("bash.exe","""C:\Program Files\Git\bin\bash.exe"" --login -i ""C:\Program Files\Docker Toolbox\start.sh""",false)
 StartProgram("bash.exe","""C:\Program Files\Git\bin\bash.exe"" --login -i ""C:\Program Files\Docker Toolbox\start.sh""",false)
 return
 
