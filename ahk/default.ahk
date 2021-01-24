@@ -36,6 +36,10 @@ StartWindow(WinClass, ProgramFullPath, AsAdmin){
 ; autohotkey
 !^r::Reload ; Assign Ctrl-Alt-R as a hotkey to restart the script.
 
+!^h::
+StartProgram("hh.exe","C:\Program Files\AutoHotkey\AutoHotkey.exe",false)
+return
+
 ; browsers
 !^f::
 StartProgram("firefox.exe","C:\Program Files\Mozilla Firefox\firefox.exe",false)
@@ -112,29 +116,32 @@ return
 StartProgram("Everything.exe","C:\Program Files\Everything\Everything.exe",false)
 return
 
-!^x::
-StartProgram("Explorer.exe","C:\Windows\explorer.exe",false)
-return
-
 !^s::
 StartProgram("eCloud.exe","C:\Program Files (x86)\ecloud\eCloud.exe",false)
 return
+
+/*
+!^x::
+StartProgram("Explorer.exe","C:\Windows\explorer.exe",false)
+return
+*/
 
 ;remote
 !^t::
 StartProgram("WinSCP.exe","C:\Program Files (x86)\WinSCP\WinSCP.exe",false)
 return
 
-/*
 !^m::
 StartProgram("MobaXterm.EXE","C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe",false)
 return
 */
 
 ;database
+/*
 !^h::
 StartProgram("heidisql.exe","C:\Program Files\HeidiSQL\heidisql.exe",false)
 return
+*/
 
 ; documents
 !^d::
