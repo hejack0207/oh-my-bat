@@ -20,7 +20,7 @@ if "x%~1" == "x/?" (
   exit /b %ERRORLEVEL%
 )
 
-call :appendpath "C:\Program Files\Docker Toolbox"
+call :appendpath %2
 goto :EOF
 
 :appendpath
@@ -30,11 +30,9 @@ exit /b 0
 
 :printhelp
 echo Usage:
-echo     %~1 [options]
+echo     %~1 [options] <path>
 echo.
 echo Options:
-echo     install			  install default ahk script
-echo     uninstall			  uninstall ahk script
 echo     -help ^| --help ^| -? ^| /?         Display this help and exit
 echo.
 exit /b 0
