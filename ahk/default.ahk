@@ -119,8 +119,12 @@ return
 StartProgram("Everything.exe","C:\Program Files\Everything\Everything.exe",false)
 return
 
-!^s::
+!^p::
 StartProgram("eCloud.exe","C:\Program Files (x86)\ecloud\eCloud.exe",false)
+return
+
+!^s::
+StartProgram("WXDrive.exe","C:\\Program Files (x86)\\WXDrive\\WXDrive.exe",false)
 return
 
 /*
@@ -153,10 +157,6 @@ return
 
 !^n::
 StartProgram("VNote.exe","D:\Program Files\VNote_win_X64_portable_2.7.2\VNote\VNote.exe",false)
-return
-
-!^p::
-StartProgram("WXDrive.exe","C:\\Program Files (x86)\\WXDrive\\WXDrive.exe",false)
 return
 
 ; communication
