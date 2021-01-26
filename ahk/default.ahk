@@ -155,6 +155,10 @@ return
 StartProgram("VNote.exe","D:\Program Files\VNote_win_X64_portable_2.7.2\VNote\VNote.exe",false)
 return
 
+!^p::
+StartProgram("WXDrive.exe","C:\\Program Files (x86)\\WXDrive\\WXDrive.exe",false)
+return
+
 ; communication
 !^w::
 StartProgram("WXWork.exe","C:\Program Files (x86)\WXWork\WXWork.exe",false)
