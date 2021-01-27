@@ -100,6 +100,10 @@ return
 StartProgram("bash.exe","""C:\Program Files\Git\bin\bash.exe"" --login -i ""C:\Program Files\Docker Toolbox\start.sh""",false)
 return
 
+!^x::
+StartProgram("Xshell.exe","C:\Program Files (x86)\NetSarang\Xshell 6\Xshell.exe",false)
+return
+
 /*
 !^p::
 StartProgram("pwsh.exe","pwsh",true)
