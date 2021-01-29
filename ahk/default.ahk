@@ -143,6 +143,11 @@ StartProgram("WinSCP.exe","C:\Program Files (x86)\WinSCP\WinSCP.exe",false)
 return
 
 !^m::
+StartProgram("wemeetapp.exe","C:\Program Files (x86)\Tencent\WeMeet\wemeetapp.exe",false)
+return
+
+/*
+!^m::
 StartProgram("MobaXterm.EXE","C:\Program Files (x86)\Mobatek\MobaXterm\MobaXterm.exe",false)
 return
 */
