@@ -82,7 +82,7 @@ return
 ; shell
 !^,::
 EnvSet, MSYSTEM, MSYS2
-StartWindow("msys2","D:\Program Files\msys64\usr\bin\mintty.exe --class msys2 -i ""D:\Program Files\msys64\msys2.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\msys2.exe"" -o AppID=MSYS2.Shell.MSYS.9 -o AppName=""MSYS2 MSYS Shell"" -T MSYS2 --store-taskbar-properties -- /usr/bin/zsh -l",false)
+StartWindow("msys2","D:\Program Files\msys64\usr\bin\mintty.exe --class msys2 -i ""D:\Program Files\msys64\msys2.exe"" -o AppLaunchCmd=""D:\Program Files\msys64\msys2.exe"" -o AppID=MSYS2.Shell.MSYS.9 -o AppName=""MSYS2 MSYS Shell"" -T MSYS2 --store-taskbar-properties -- /usr/bin/tmux -l",false)
 return
 
 !^.::
