@@ -1,5 +1,7 @@
 #SingleInstance force
 
+; #include %A_ScriptDir%\clipjump\Clipjump.ahk
+
 RunAsAdmin(Fullpath){
     ;~ RunAs, Administrator, 123qwe!@#
     ;~ Run, %Fullpath%
