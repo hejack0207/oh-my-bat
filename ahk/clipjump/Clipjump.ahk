@@ -1661,4 +1661,24 @@ Receive_WM_COPYDATA(wParam, lParam){
 #include %A_ScriptDir%\lib\settingsHelper.ahk
 #include *i %A_ScriptDir%\plugins\_registry.ahk
 
+; #Include lib\WM_MOUSEMOVE.ahk
+; #Include lib\Searchpastemode.ahk
+; #Include lib\Customizer.ahk
+; #Include lib\API.ahk
+; #Include lib\translations.ahk
+; #Include lib\multi.ahk
+; #Include lib\aboutgui.ahk
+; #include lib\TT_Console.ahk
+; #include lib\Gdip_min.ahk
+; #include lib\HotkeyParser.ahk
+; #include lib\anticj_func_labels.ahk
+; #include lib\settings gui plug.ahk
+; #include lib\history gui plug.ahk
+; #include lib\pluginManager.ahk
+; #include lib\channelOrganizer.ahk
+; #include lib\TooltipEx.ahk
+; #include lib\SQLiteDB\Class_SQLiteDB.ahk
+; #include lib\settingsHelper.ahk
+; #include *i plugins\_registry.ahk
+
 ;------------------------------------------------------------------- X -------------------------------------------------------------------------------
