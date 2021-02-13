@@ -1,0 +1,14 @@
+Clipjump
+Copyright (C) 2013 Avi Aryan
+Licensed under Apache License v2.0
+
+Clipjump is a free multiple clipboard manager with extra-ordinary features.
+
+Clipjump can be redistributed freely provided this file remains intact.
+More on redistribution (and editing) terms can be seen at (http://www.apache.org/licenses/LICENSE-2.0).
+
+Contact ==================
+
+Mail:- avi.aryan123@gmail.com
+Site:- www.aviaryan.github.io
+Site:- www.github.com/aviaryan
