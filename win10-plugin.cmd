@@ -1,7 +1,6 @@
 @echo off
-@echo hi
 
-call :hosts_file
+call :%1
 exit /b
 
 :hosts_file
