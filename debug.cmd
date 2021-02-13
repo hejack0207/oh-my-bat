@@ -1,0 +1,1 @@
+AutoHotKey ahk\debug.ahk
