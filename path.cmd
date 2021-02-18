@@ -20,7 +20,7 @@ if "x%~1" == "x/?" (
   exit /b %ERRORLEVEL%
 )
 if "x%~1" == "xappend" (
-  call :append_path "%2"
+  call :append_path %~2
   exit /b %ERRORLEVEL%
 )
 if "x%~1" == "xquery" (
@@ -33,7 +33,7 @@ call :checkparams
 goto :EOF
 
 :append_path
-@echo %1
+@echo "%1"
 REM  set value=%path%;%1
 REM  reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /t REG_EXPAND_SZ /d "%value%" /f
 exit /b 0
