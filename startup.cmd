@@ -33,7 +33,8 @@ call :checkparams
 goto :EOF
 
 :append_startup
-REM  reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v Path /t REG_EXPAND_SZ /d "%value%" /f
+REM  reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v vbox /d "C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe -s default"
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v clipjump /d "C:\Program Files\AutoHotkey\AutoHotkey.exe D:\Program Files\msys64\home\Administrator\codes\collection\oh-my-bat\ahk\clipjump\Clipjump.ahk" /f
 exit /b 0
 
 :query_startup
@@ -42,7 +43,7 @@ exit /b 0
 
 :printhelp
 echo Usage:
-echo     %~1 [options] path...
+echo     %~1 [options] append or query ...
 echo.
 echo Options:
 echo     -help ^| --help ^| -? ^| /?         Display this help and exit
