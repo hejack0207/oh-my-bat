@@ -1641,44 +1641,24 @@ Receive_WM_COPYDATA(wParam, lParam){
 
 ;##############################################################################
 
-; #Include %A_ScriptDir%\lib\WM_MOUSEMOVE.ahk
-; #Include %A_ScriptDir%\lib\Searchpastemode.ahk
-; #Include %A_ScriptDir%\lib\Customizer.ahk
-; #Include %A_ScriptDir%\lib\API.ahk
-; #Include %A_ScriptDir%\lib\translations.ahk
-; #Include %A_ScriptDir%\lib\multi.ahk
-; #Include %A_ScriptDir%\lib\aboutgui.ahk
-; #include %A_ScriptDir%\lib\TT_Console.ahk
-; #include %A_ScriptDir%\lib\Gdip_min.ahk
-; #include %A_ScriptDir%\lib\HotkeyParser.ahk
-; #include %A_ScriptDir%\lib\anticj_func_labels.ahk
-; #include %A_ScriptDir%\lib\settings gui plug.ahk
-; #include %A_ScriptDir%\lib\history gui plug.ahk
-; #include %A_ScriptDir%\lib\pluginManager.ahk
-; #include %A_ScriptDir%\lib\channelOrganizer.ahk
-; #include %A_ScriptDir%\lib\TooltipEx.ahk
-; #include %A_ScriptDir%\lib\SQLiteDB\Class_SQLiteDB.ahk
-; #include %A_ScriptDir%\lib\settingsHelper.ahk
-; #include *i %A_ScriptDir%\plugins\_registry.ahk
-
-#Include lib\WM_MOUSEMOVE.ahk
-#Include lib\Searchpastemode.ahk
-#Include lib\Customizer.ahk
-#Include lib\API.ahk
-#Include lib\translations.ahk
-#Include lib\multi.ahk
-#Include lib\aboutgui.ahk
-#include lib\TT_Console.ahk
-#include lib\Gdip_min.ahk
-#include lib\HotkeyParser.ahk
-#include lib\anticj_func_labels.ahk
-#include lib\settings gui plug.ahk
-#include lib\history gui plug.ahk
-#include lib\pluginManager.ahk
-#include lib\channelOrganizer.ahk
-#include lib\TooltipEx.ahk
-#include lib\SQLiteDB\Class_SQLiteDB.ahk
-#include lib\settingsHelper.ahk
-#include *i plugins\_registry.ahk
+#Include %A_ScriptDir%\lib\WM_MOUSEMOVE.ahk
+#Include %A_ScriptDir%\lib\Searchpastemode.ahk
+#Include %A_ScriptDir%\lib\Customizer.ahk
+#Include %A_ScriptDir%\lib\API.ahk
+#Include %A_ScriptDir%\lib\translations.ahk
+#Include %A_ScriptDir%\lib\multi.ahk
+#Include %A_ScriptDir%\lib\aboutgui.ahk
+#include %A_ScriptDir%\lib\TT_Console.ahk
+#include %A_ScriptDir%\lib\Gdip_min.ahk
+#include %A_ScriptDir%\lib\HotkeyParser.ahk
+#include %A_ScriptDir%\lib\anticj_func_labels.ahk
+#include %A_ScriptDir%\lib\settings gui plug.ahk
+#include %A_ScriptDir%\lib\history gui plug.ahk
+#include %A_ScriptDir%\lib\pluginManager.ahk
+#include %A_ScriptDir%\lib\channelOrganizer.ahk
+#include %A_ScriptDir%\lib\TooltipEx.ahk
+#include %A_ScriptDir%\lib\SQLiteDB\Class_SQLiteDB.ahk
+#include %A_ScriptDir%\lib\settingsHelper.ahk
+#include *i %A_ScriptDir%\plugins\_registry.ahk
 
 ;------------------------------------------------------------------- X -------------------------------------------------------------------------------
