@@ -1,2 +1,2 @@
 @echo off
-start "C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe" -s default
+start "vbox headless" "C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe" -s default
