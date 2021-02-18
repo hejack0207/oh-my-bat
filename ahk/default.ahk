@@ -66,6 +66,7 @@ if FileExist("C:\Program Files (x86)\Vim\vim82\gvim.exe")
 StartProgram("gvim.exe",Fullpath_Gvim,false)
 return
 
+/*
 !^v::
 if FileExist("C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\Code.exe")
     Fullpath_Code := "C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\Code.exe"
@@ -75,6 +76,7 @@ if FileExist("d:\Users\blueo\scoop\apps\vscode\1.38.1\Code.exe")
 
 StartProgram("Code.exe",Fullpath_Code,true)
 return
+*/
 
 /*
 !^i::
@@ -191,6 +193,10 @@ return
 ; communication
 !^w::
 StartProgram("WXWork.exe","C:\Program Files (x86)\WXWork\WXWork.exe",false)
+return
+
+!^v::
+StartProgram("WeChat.exe","C:\Program Files (x86)\Tencent\WeChat\WeChat.exe",false)
 return
 
 !^q::
