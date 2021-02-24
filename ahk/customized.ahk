@@ -208,6 +208,13 @@ return
 StartProgram("iOA.exe","""C:\Program Files (x86)\iOA\iOA.exe"" -userstart",false)
 return
 
+#h::
+Send, #{Left}
+return
+
+#l::
+Send, #{Right}
+return
 /*
 !^s::
 StartProgram("soffice.exe","C:\Program Files\LibreOffice\program\soffice.exe",false)
