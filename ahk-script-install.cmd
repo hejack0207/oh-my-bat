@@ -4,9 +4,11 @@ setlocal EnableDelayedExpansion
 set startup=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
 @echo "startup: %startup%"
 
+mkdir c:\ahk
 copy ahk\CapsLocks.ahk c:\ahk\CapsLocks.ahk"
 copy ahk\customized.ahk c:\ahk\customized.ahk"
 copy ahk\vim_mouse_2.ahk c:\ahk\vim_mouse_2.ahk"
+mkdir c:\ahk\bug.n
 xcopy /y /s ahk\bug.n c:\ahk\bug.n
 copy ahk\startup.ahk "%startup%\startup.ahk"
 
