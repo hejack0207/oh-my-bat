@@ -217,5 +217,3 @@ return
 StartProgram("Evernote.exe","C:\Program Files (x86)\Yinxiang Biji\Ó¡Ïó±Ê¼Ç\Evernote.exe",false)
 return
 */
-
-#include c:\CapsLocks.ahk
