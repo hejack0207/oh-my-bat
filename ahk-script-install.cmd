@@ -5,7 +5,8 @@ set startup=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
 @echo "startup: %startup%"
 
 copy ahk\CapsLocks.ahk c:\CapsLocks.ahk"
-copy ahk\default.ahk "%startup%\default.ahk"
+copy ahk\customized.ahk c:\customized.ahk"
+copy ahk\startup.ahk "%startup%\startup.ahk"
 
 REM  if exist "%startup%\clipjump" mkdir "%startup%\clipjump"
 REM  xcopy /y /s ahk\clipjump "%startup%\clipjump"
