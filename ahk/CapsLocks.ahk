@@ -151,7 +151,7 @@ return                                                               ;|
 ;                      CapsLock + o |  End                           ;|
 ;                      Ctrl, Alt Compatible                          ;|
 ;-----------------------------------o---------------------------------o
-CapsLock & i::                                                       ;|
+CapsLock & u::                                                       ;|
 if GetKeyState("control") = 0                                        ;|
 {                                                                    ;|
     if GetKeyState("alt") = 0                                        ;|
@@ -169,7 +169,7 @@ else {                                                               ;|
 }                                                                    ;|
 return                                                               ;|
 ;-----------------------------------o                                ;|
-CapsLock & o::                                                       ;|
+CapsLock & p::                                                       ;|
 if GetKeyState("control") = 0                                        ;|
 {                                                                    ;|
     if GetKeyState("alt") = 0                                        ;|
@@ -196,7 +196,7 @@ return                                                               ;|
 ;                      CapsLock + p |  PageDown                      ;|
 ;                      Ctrl, Alt Compatible                          ;|
 ;-----------------------------------o---------------------------------o
-CapsLock & u::                                                       ;|
+CapsLock & i::                                                       ;|
 if GetKeyState("control") = 0                                        ;|
 {                                                                    ;|
     if GetKeyState("alt") = 0                                        ;|
@@ -214,7 +214,7 @@ else {                                                               ;|
 }                                                                    ;|
 return                                                               ;|
 ;-----------------------------------o                                ;|
-CapsLock & p::                                                       ;|
+CapsLock & o::                                                       ;|
 if GetKeyState("control") = 0                                        ;|
 {                                                                    ;|
     if GetKeyState("alt") = 0                                        ;|
@@ -376,7 +376,7 @@ CapsLock & t:: Run C:\Program Files (x86)\Notepad++\notepad++.exe    ;|
 ;                     CapsLock + 9  |  Shift + 9     (               ;|
 ;                     CapsLock + 0  |  Shift + 0     )               ;|
 ;-----------------------------------o---------------------------------o
-CapsLock & `;:: Send, {Enter}                                        ;|
+CapsLock & `;:: Send, _
 CapsLock & ':: Send, =                                               ;|
 CapsLock & [:: Send, ^-                                              ;|
 CapsLock & ]:: Send, {F12}                                           ;|
