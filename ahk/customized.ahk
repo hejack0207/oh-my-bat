@@ -208,13 +208,21 @@ return
 StartProgram("iOA.exe","""C:\Program Files (x86)\iOA\iOA.exe"" -userstart",false)
 return
 
-#h::
-Send, #{Left}
-return
+; #!h::
+; SendInput, #{Left}
+; return
+;
+; #!l::
+; SendInput, #{Right}
+; return
 
-#l::
-Send, #{Right}
-return
+#UseHook on
+#!h::SendInput #{Left}
+#!j::SendInput #{Down}
+#!k::SendInput #{Up}
+#!l::SendInput #{Right}
+#UseHook off
+
 /*
 !^s::
 StartProgram("soffice.exe","C:\Program Files\LibreOffice\program\soffice.exe",false)
