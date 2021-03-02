@@ -122,11 +122,11 @@ return
 StartProgram("Xshell.exe","C:\Program Files (x86)\NetSarang\Xshell 6\Xshell.exe",false)
 return
 
-/*
-!^p::
+!^'::
 StartProgram("pwsh.exe","pwsh",true)
 return
 
+/*
 !^u::
 StartProgram("wsl.exe","C:\Windows\System32\wsl.exe -d ubuntu1804",false)
 return
