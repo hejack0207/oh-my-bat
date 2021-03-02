@@ -34,7 +34,7 @@ goto :EOF
 
 :append_startup
 REM  reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v vbox /d "C:\Program Files\Oracle\VirtualBox\VBoxHeadless.exe -s default"
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v clipjump /d "C:\Program Files\AutoHotkey\AutoHotkey.exe D:\Program Files\msys64\home\Administrator\codes\collection\oh-my-bat\ahk\clipjump\Clipjump.ahk" /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v clipjump /d "C:\Program Files\AutoHotkey\AutoHotkey.exe D:\Program Files\msys64\home\Administrator\codes\oh-my-bat\ahk\clipjump\Clipjump.ahk" /f
 exit /b 0
 
 :query_startup
