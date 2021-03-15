@@ -199,12 +199,12 @@ return
 StartProgram("WeChat.exe","C:\Program Files (x86)\Tencent\WeChat\WeChat.exe",false)
 return
 
-!^q::
+!^i::
 StartProgram("QiDian.exe","C:\Program Files (x86)\Tencent\QiDian\Bin\QiDian.exe",false)
 return
 
 ; vpn
-!^i::
+!^q::
 StartProgram("iOA.exe","""C:\Program Files (x86)\iOA\iOA.exe"" -userstart",false)
 return
 
