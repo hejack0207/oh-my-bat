@@ -19,7 +19,7 @@ if errorlevel 1 (
 )
 
 %vb% list runningvms | findstr -i %vm% >nul
-if errorlevel 0 (
+if not errorlevel 1 (
 	echo "%vm% already started"
 	exit /b 1
 )
